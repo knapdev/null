@@ -1,0 +1,452 @@
+null
+
+Inspirations:
+    Resident Evil 4
+    Dark Souls
+    Zelda
+    Silent Hill
+    Book of Epock
+    Akashic records
+    Cthulu
+
+Pitch:
+    [NULL] is an open world(exploration based?) survival horror game that takes place [#] years after a viral zombie outbreak.
+    You play as [Character Name] who is an "exterminator" that recieves a cryptic radio signal that leads them to a
+    slum city built on a small island where he discovers that there may be more to the outbreak than initially thought.
+
+Story:
+    Present day. Present Time. hahaha
+
+    We don't know how to started. Or where it originated.
+    It all happened suddenly. No one saw it coming.
+    Within weeks major cities were completely covered and started spreading out.
+    Those who were able made their way into the rural areas, eventually grouping up and creating small settlements.
+    It's been 5 years and major attempts have been made by cooperating settlements to clean up the cities.
+    But it never seems to help, they just keep coming.
+
+    There was a person from one of the settlements who recieved a cryptic message pointing to a certain GPS coordinate and they decide to go investigate.
+
+    -----
+
+    These objects/entities have appeared in hidden locations, mainly in the major cities, and they lure humans to them by various means. Telepathy, hallucinatins, technology, etc.
+    Once lured into the vicinity of the object/entity it seems to extract DNA from victim before killing them. It uses the DNA to spawn "zombie clones" of the victim.
+
+    The bosses are really other aliens/beings trying to find the objects/entities to kill them.
+
+    Once on the island city the player is manipulated by the object/entity to kill the aliens/beings for them before finally luring the player to it to do the spawning thing.
+
+    -----
+
+    A cosmic entity has inhabited an island city with intentions to exterminate all life on earth, or something.
+    A number of other cosmic entities have tracked it to the island in an attempt to destroy it or scare it off.
+    The player is lured into the city by the bad entity and ends up killing the good entities for the bad one.
+
+    -----
+
+    Act I
+        Status Quo
+            Post-apocalyptic world where zombies have become "normal" and treated almost like wild animals.
+            People have etched out small protected settlements but venturing outside isn't uncommon as the infection from zombies is easily curable if administered in time.
+
+        Call to Adventure
+            The main character is sent, or goes on their own will, to a small town that is considered "unincorporated" for some reason.
+            Unincorporated means it hasn't been cleared out of zombies and cleaned up for settlement.
+
+        Departure
+        Assistance/Mentor
+            Upon arriving at the town the main character discoveres that there are people living there and something supernatural is going on.
+
+    Act II
+        Trials
+        Approach
+        Conflict
+        Result/Reward
+
+    Act III
+        Return
+        New Status Quo
+
+    Game starts with the main character arriving on the outskirts of town before taking a trolley or subway train into the town.
+
+    Player is lured into the city by antagonist that intends on using the player to kill all the bosses only to swoop in at the
+    last moment to gain the reward.
+
+    Get call to action
+    Cross threshold (Boat ride)
+    Boss 1
+    Meet mentor / Acquire knowledge
+
+    Boss 2 & 3  / Acquire access to Boss 4
+    Boss 4 / Acquire new knowledge
+    Boss 5, 6 & 7 / Acquire access to Boss 8
+    Boss 8
+
+    Intro
+        Player starts at the top of a cliff, probably a parking lot or something.
+        * They make their way down a dirt path giving the player a good view of the city from afar.
+        At the bottom of the path is a boat. (NPC?)
+        They sail on the boat towards the city which looms over the water.
+        Upon arriving on shore they make their way into the city through a maze of pathways until they arrive at the town center.
+
+    Boss 1
+        The boss is a giant bird, probably a crow.
+        Fighting ensues.
+        Before killing the bird it flies away towards a tower, which becomes the players next objective.
+        If the player dies the story goes on. After defeating you the bird still goes to it's tower and the player is eventually wakes up or is revived.
+        The player learns that to defeat the bird they must do 2 things, yada yada.
+
+    At this point the map opens up a little and the player can choose which of the 2 things to do first.
+
+World Design:
+    Small, interconnected open-world environment
+    No in-game map
+    Feels like it's been lived in, feels "real"
+    Can go anywhere
+    Environmental storytelling
+    Isolation
+
+    Areas
+        Dock
+        Garden
+        Cave
+        "Keep" - Core
+        Districts e.g. Artisan, Production, etc
+        Town Square/Central Plaza - hub
+        Power station
+        Marketplace
+        Drug Den
+        Hospital
+        Graveyard
+        Church
+        Water treatment/storage
+        Theater?
+        Rooftop Dump
+        School / Library
+        Sewer
+
+NPCs
+    Merchant
+    Librarian
+    NPC that can cure the main character for a price.
+    NPC that is a large "friendly" creature stuck behind a wall. You can only make out it's eye through a hole in the wall.
+    Weapon upgrade NPC - repairs or upgrades weapons for a price
+    Creepy Merchant
+    Mentor
+
+Boss Ideas
+    Quest mission to lure boss to area in able to fight it (optional boss)
+    Large snake-like creature that follows the player, winding it's body through the tight corridors.
+    Garden
+        Giant moth
+        Plant monster
+        Giant crow
+    Water monster
+        Tentacles
+        Large gaping mouth
+    Rooftop
+        Swarm of crows/birds (Gears of War Krill)
+        Need to use spotlights to stop them?
+    Twin Bosses
+    Giant spider boss
+
+            Boss 1              (Town Square)
+        Boss 2  Boss 3          (Garden / Church)
+            Boss 4              (Tower)
+    Boss 5  Boss 6  Boss 7      (???)
+            Boss 8              (Rooftop)
+
+Items:
+    Weapon ammo
+    Weapons
+        Machete - short range, med damage, fast
+        Pistol - med range, med damage, med speed
+        Shotgun - short range, high damage, slow
+        Sniper - long range, high damage, slow
+        Flare gun - ignites enemies, short range, slow
+        Bow and arrow - med/long range, high damage, slow, quiet
+
+    Items to upgrade weapons without NPC
+    Items mats needed to upgrade weapons
+
+    Keys - Used to open shortcuts or used to enter new areas
+
+    Tools
+        Flashlight
+        Boltcutters
+    Batteries
+
+    Consumables
+        Healing potion - applies Heal status effect
+        Burn Cure - cures Burning status effect
+        Bandage - cures Bleeding status effect
+        Max Health increase - permanently increases max health
+        Stamina increase - permanently increases max stamina
+
+Interactions: (What can the player do? Verbs.)
+    Open/Close
+        Doors
+        Lockers
+        Drawers
+        Chest/Box
+    Turn On/Off
+        Power Generators that can power lights, doors, etc
+        Lights
+    Knock down ladder
+    Climb
+        Ladder
+        Ledge
+    Use zipline
+    Push boxes/statues
+    Squeeze through narrow space
+    Use elevator
+    Switch weapon
+    Use item
+    Combine items
+
+Systems
+    flashlight - turn on/off, cookie
+    stamina - regains slowly, running decreases stamina
+    weapon - fire, switch weapons, reload
+    save point - like bonfires. saves progress, resets player status(health, stamina), resets enemies, etc
+    door & key - open/close, jammed/locked (?? shootable locks ??)
+    diary/log - read, multiple pages
+    ledge climb/hang/drop
+    ladder climb
+
+Status effects:
+    Bleeding - deals damage over time
+    Burning - deals damage over time
+    Wet - reduces stamina regain
+    Heal - gives health over time
+    Freezing - slows character
+
+Puzzles:
+    ?? Have puzzles that require community collaboration to solve. ??
+    Combination lock
+    Cryptogram - optional puzzle for optional content
+    CCTV or videos needed to solve puzzle, get insight
+    Gas/toxic leak area, requires gas mask
+    Tune radio to certain channel to hear clue
+    Block push
+    Guide object through the environment, somehow
+        - A giant ball is located on one side of the map. The goal is to get the ball to the other side of the map by various means.
+    Time based
+        - A certain door is only unlocked during a short period. i.e. The door is only unlocked between 1pm and 3pm
+    Chemical mixing / Recipe
+
+Set piece ideas:
+    Area near the edge of the island where a MASSIVE entity can be seen peeking in windows, seemingly following the player. ?? Boss fight ??
+
+    There is an area where everytime the player tries to enter a door into the area someone/something can be seen peeking out and then slamming the door.
+    The player must find the correct door to finally enter the area. Either that or only the last door the player tries to go through is the correct path.
+        e.g. There are a total of 5 doors that the player can use to enter into the area. The first 4 of those 5 doors encountered will become locked, the 5th one will remain open.
+    ?? Boss Fight ??
+
+    Mannequin - In the beginning the player comes across mannequins and potentially noticing after backtracking past a previous area where a mannequin was located that it's gone/moved.
+        Eventually it's discovered there was only ever 1 mannequin and it's a boss. idk
+
+    Broken elevator which provides a one way transportation between an upper floor and lower floor by sliding down the cable.
+
+Assets
+    Props
+        Plant plot
+        Bucket
+        Foldable TV dinner tray
+        Toilet
+        Bird cage
+        Brick
+        BBQ Grill
+        Clothes line
+        Bed / Bunkbed
+        TV
+        Dresser
+        Ceiling Fan / Box Fan
+        Air Conditioning Unit
+        Chair
+        Table
+        Rubble / Rocks / Debris
+        Cabinet
+        Broom / Dustpan
+        Paint can
+        Picture frame
+        Painting
+        Pipes
+        Basket
+
+    Free Hedges - https://opengameart.org/content/free-hedges
+    Rocks - https://opengameart.org/content/rocks-0
+    Wooden Crates - https://opengameart.org/content/free-wooden-crates
+    Weeds - https://opengameart.org/content/tiny-weeds-3
+    Misc Industrial - https://opengameart.org/content/high-quality-industrial-asset-pack
+
+Visual Effects:
+    Moth/fly swarm
+    Dust
+    Mouse/Critter scatter effect
+
+Resources:
+    Technical:
+        SpeedTutor - Many gameplay system tutorials. Unity focused - https://www.youtube.com/channel/UCwYuQIa9lgjvDiZryUVtFGw
+        Blender to Godot workflow - https://www.youtube.com/watch?v=qwz9aPdVoFg&ab_channel=CGDive
+        Rain flow shader - https://www.youtube.com/watch?v=sqWs6ScSanw&ab_channel=PolyToots
+        Ledge detection - https://www.reddit.com/r/Unity3D/comments/pugbdw/preventing_characters_from_falling_off_ledges/
+        Pivot Caching effect for foliage - https://www.youtube.com/watch?v=V1nkv8g-oi0
+        Input Remapping - https://www.youtube.com/watch?v=PKV_i4kaC0M
+        Audio Effects - https://www.youtube.com/watch?v=SF8QGmTbSLs
+        Graphics Settings Menu - https://www.youtube.com/watch?v=Hmc23XlViqg
+        Grass Shaders:
+            https://www.youtube.com/watch?v=uMB3-g8v1B0
+            https://www.youtube.com/watch?v=GLtdy3jiAp0
+
+    Design:
+        Game Loop and random nuggets - https://jaredemitchell.com/articles/creating-horror-through-level-design/
+
+    Creepy sounds:
+        Planets
+            Saturn
+            Venus
+
+    Tree It
+        https://www.evolved-software.com/treeit/treeit
+    Ziplines
+        https://www.youtube.com/watch?v=ztgSGSImIsI
+
+MISC
+
+?? If the game steered more towards techno cosmic horror, like Serial Experiments Lain, then have news broadcasts that can be found on tvs scattered through the world that talk about the players
+    actions. First they would start off like normal broadcasts but would eventually start becoming weirder and creepier.
+        - Think Jacobs Ladder + The Truman Show + Serial Experiments Lain + Matrix + Cthulu
+
+?? Player unknowingly brings entities "online" somehow ??
+
+?? Transparent window freak out. ??
+    - At some point an event is triggered which makes it look like the game has crashed. The window becomes transparent and the player can see their desktop
+    - After a few moments a creepy entity or an object animates on screen to startle the player
+    - Breaking the 4th wall
+    - Inspiration: NO PLAYERS ONLINE indie game [https://papercookies.itch.io/no-players-online]
+
+?? Backpack causes player to move slower and the player has the ability to drop their backpack to move faster ??
+    - Offers player choice
+    - Player drops backpack off in safe area. They make their way through unexplored areas, clearing them of dangers along the way
+        They discover a puzzle which requires a specific item which they have stored in their backpack
+        They go grab the backpack and bring it back to the puzzle area to use the item
+        Repeat
+
+?? Always night and stormy. Lore reason ??
+    OR
+?? Time cycle and time-requirements for some gameplay/puzzle events ??
+    - e.g. Player must go to the fountain at 3am to receive clue/item/event etc
+
+?? WoW like flight transportation instead of fast travel ??
+    - Allows player to potentially see areas they haven't before, or foreshadows plot or something
+    - Looks like a wisp or something instead of the player riding a mount? MAYBE LIKE THEY ARE TRAVELLING THROUGH WIRES!?
+
+?? NPCs can read players mind. Explains them being mute
+    They can read minds because of "supernatural stuff", i.e. They are gods, titans, angels, etc
+
+?? Corpse walking - Why is the corpse run mechanic a thing?
+        How to explain recovering your items/corpse after death.
+            Backpack drops on death. Backpack retrieval.
+
+?? Instead of having a HUD element displaying current ammo count have a button that makes the character count the number of bullets in their clip.
+        i.e. Press B button.
+            "One, two, three, four.. four."
+
+?? To switch weapons the player presses and holds a button which transistions the camera in front of the player. Moving the thumbstick in a certain direction causes the character to position
+    their hand on a different weapon. i.e. The player has a sniper rifle attached to their back, a shotgun strapped to their left thigh and a pistol on their right thigh. Moving the thumbstick
+    up would cause the player to position their right hand above their head and on the butt of the sniper rifle. Moving the stick left would move the hand over the pistol and to the right, over the shotgun.
+    Releasing the original held button returns the camera to it's default state and causes the player to equip the selected weapon.
+
+?? No HUD?
+    Health reflected by player character animations
+    Press button to check equipped weapon ammo count. Character vocalizes. 1...2...3..
+    Press button to switch weapons, visible in characters hands
+
+?? Campfire
+	The player can create a campfire almost anywhere. Campfires act like save points. If the player dies they will respawn at their last build campfire.
+    Prevents "zombies" from spawning within a radius? Also deters zombies?
+
+?? Bridge NPC
+	There is an NPC that the player must find, and potentially help, to lower a raised bridge which gives the player access to a new part of the city.
+
+?? Broken Elevator
+	Maybe there are some elevators that can be fixed by various means to give quick access to higher floors without having to traverse lower floors in high rise buildings.
+
+?? Crane lock
+	There is a crane somewhere in the city that the player must use to remove debris or something to open up new area.
+
+?? Status Effects
+    Poison
+        Causes player to occasionally vomit
+
+    Bleeding
+        Causes damage per second
+
+    Cold
+        Causes player to occasionally sneeze, attracting enemies
+
+    Injured
+        Causes speed decrease
+
+    Wet
+        Stamina regeneration decrease
+
+?? Escape Room
+    At some point the player get's locked inside a single room and must solve a series of puzzles to unlock the door.
+
+-----
+
+Phases/Passes
+        1: Concept
+        2: Layout
+            - No optimization
+            - No lighting
+            - No encounters?
+        3: Gameplay
+            - Enemies & pathfinding
+            - Items
+            - Puzzles
+            - *SOME* optimization
+        4: Feedback
+        5: Content Complete
+            - All gameplay systems functional
+        6: Polish
+
+Tasks:
+    Player controller
+        - Walk
+        - Run
+        - Look
+	    - Crouch
+
+    Interactables
+        - Doors
+        - Ladder climb
+	    - Ledge climb/drop
+
+    Player weapon system
+
+    Enemies
+        Can be killed
+        Will chase player if detected
+
+    Handle player death
+
+-----
+
+Player interactions
+
+    Low-Wall/Window Vault
+    Ledge Drop (Low and High)
+    Ledge Climb (Low and High)
+    Ladder Climb
+    Door Open/Close
+    Gap Jump
+    Rope Climb
+    Elevator
+    Zip Line
+
+    Door Lock/Unlock (Can player re-lock doors? To prevent enemies from following?)
+    Stairs
+    Shootable/Melee-able Locks
+    Examine-able object (Like the truck at the beginning of RE4)
