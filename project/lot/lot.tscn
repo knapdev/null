@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp62hqc1rp7bw"]
+
+[ext_resource type="Material" uid="uid://bmqpx5g8iij5r" path="res://common/prototyping/materials/grid_material.tres" id="1_qwhbu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vpnyh"]
+size = Vector3(32, 0.1, 32)
+
+[sub_resource type="BoxMesh" id="BoxMesh_76m06"]
+size = Vector3(32, 0.1, 32)
+
+[node name="LOT" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 10, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 250.0
+
+[node name="Platform" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform"]
+shape = SubResource( "BoxShape3D_vpnyh" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Platform"]
+material_override = ExtResource( "1_qwhbu" )
+mesh = SubResource( "BoxMesh_76m06" )
