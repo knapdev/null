@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp62hqc1rp7bw"]
+[gd_scene load_steps=5 format=3 uid="uid://cp62hqc1rp7bw"]
 
 [ext_resource type="Material" uid="uid://bmqpx5g8iij5r" path="res://common/prototyping/materials/grid_material.tres" id="1_qwhbu"]
+[ext_resource type="PackedScene" uid="uid://b31kvvna1deng" path="res://player/player.tscn" id="2_ap6sq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vpnyh"]
 size = Vector3(32, 0.1, 32)
@@ -23,3 +24,5 @@ shape = SubResource( "BoxShape3D_vpnyh" )
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Platform"]
 material_override = ExtResource( "1_qwhbu" )
 mesh = SubResource( "BoxMesh_76m06" )
+
+[node name="Player" parent="." instance=ExtResource( "2_ap6sq" )]

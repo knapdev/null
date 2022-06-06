@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b31kvvna1deng"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_ba2ga"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ciq7m"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fone3"]
+radius = 0.25
+height = 1.8
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xtysa"]
+margin = 0.1
+radius = 0.25
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource( "1_ba2ga" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource( "CapsuleShape3D_ciq7m" )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource( "CapsuleMesh_fone3" )
+
+[node name="CamRig" type="Position3D" parent="."]
+
+[node name="Pivot" type="Position3D" parent="CamRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 1.1, 0)
+
+[node name="SpringArm" type="SpringArm3D" parent="CamRig/Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.2)
+shape = SubResource( "SphereShape3D_xtysa" )
+
+[node name="Camera3D" type="Camera3D" parent="CamRig/Pivot/SpringArm"]
+current = true
+fov = 60.0
+near = 0.01
+far = 1024.0
