@@ -19,6 +19,11 @@ func physics_process(delta: float):
 	if context.get_move_input().length_squared() > 0:
 		context.state.change_state(PlayerMoveState.new())
 		
+	# apply gravity
+	if context.is_on_floor() == false:
+		context.velocity.y -= context.GRAVITY * delta
+	context.move_and_slide()
+		
 	# look
 	var look_input_dir = context.get_look_input()
 	
