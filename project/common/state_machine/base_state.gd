@@ -3,8 +3,8 @@ class_name BaseState
 
 var context: Node
 
-func init(context: Node):
-	self.context = context
+func init(context_node: Node):
+	context = context_node
 
 func enter():
 	pass

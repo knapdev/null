@@ -6,8 +6,8 @@ var current_state: BaseState = null
 
 var context: Node = null
 
-func init(context: Node, start_state: BaseState):
-	self.context = context
+func init(context_node: Node, start_state: BaseState):
+	context = context_node
 	push_state(start_state)
 
 func input(event: InputEvent):
@@ -41,8 +41,8 @@ func pop_state():
 	if current_state != null:
 		current_state.exit()
 		
-	var pop_state = states.pop_back()
-	pop_state.queue_free()
+	var popped_state = states.pop_back()
+	popped_state.queue_free()
 	
 	if states.size() > 0:
 		current_state = states.back()
