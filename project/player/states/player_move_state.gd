@@ -2,6 +2,7 @@ extends BaseState
 class_name PlayerMoveState
 
 func enter():
+	context.playback.travel("Walk")
 	super.enter()
 	
 func exit():
@@ -25,3 +26,5 @@ func physics_process(delta: float):
 	
 	var look_input_dir = context.get_look_input()
 	context.look(look_input_dir, delta)
+	
+	context.anim_tree.set("parameters/Walk/blend_position", -move_input_dir.y)

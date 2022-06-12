@@ -2,6 +2,7 @@ extends BaseState
 class_name PlayerIdleState
 
 func enter():
+	context.playback.travel("Idle")
 	super.enter()
 	
 func exit():

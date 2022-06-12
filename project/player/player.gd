@@ -15,10 +15,14 @@ var direction: Vector3 = Vector3.FORWARD
 
 var state: StateMachine = null
 
-@onready var mesh: MeshInstance3D = $MeshInstance3D
+@onready var model: Node3D = $Model
+
 @onready var camrig: Position3D = $CamRig
 @onready var camrig_pivot: Position3D = $CamRig/Pivot
 @onready var camrig_springarm: SpringArm3D = $CamRig/Pivot/SpringArm
+
+@onready var anim_tree: AnimationTree = $Model/AnimationTree
+@onready var playback = anim_tree.get("parameters/playback")
 
 func _ready():
 	state = StateMachine.new()
@@ -52,7 +56,7 @@ func move(amount: float, delta: float):
 	
 func turn(amount: float, delta: float):
 	direction = direction.rotated(Vector3.UP, deg2rad((-amount * turn_speed) * delta))
-	mesh.rotation.y = lerp_angle(mesh.rotation.y, -atan2(direction.z, direction.x) + deg2rad(90), 0.25)
+	model.rotation.y = lerp_angle(model.rotation.y, -atan2(direction.z, direction.x) + deg2rad(90), 0.25)
 	
 	camrig.rotation.y = lerp_angle(camrig.rotation.y, -atan2(direction.z, direction.x) - deg2rad(90), 0.25)
 
