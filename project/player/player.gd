@@ -2,18 +2,18 @@ extends CharacterBody3D
 
 var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-@export var walk_speed: float = 4
-@export var turn_speed: float = 90
+@export var walk_speed: float = 3.0
+@export var turn_speed: float = 90.0
 
 @export var look_range_hori: float = 60.0
 @export var look_range_vert: float = 30.0
 @export var look_speed: float = 7.5
 
-var move_speed: float = walk_speed
-
 var direction: Vector3 = Vector3.FORWARD
 
 var state: StateMachine = null
+
+@onready var move_speed: float = walk_speed
 
 @onready var model: Node3D = $Model
 
@@ -56,8 +56,8 @@ func move(amount: float, delta: float):
 	
 func turn(amount: float, delta: float):
 	direction = direction.rotated(Vector3.UP, deg2rad((-amount * turn_speed) * delta))
-	model.rotation.y = lerp_angle(model.rotation.y, -atan2(direction.z, direction.x) + deg2rad(90), 0.25)
 	
+	model.rotation.y = lerp_angle(model.rotation.y, -atan2(direction.z, direction.x) + deg2rad(90), 0.25)
 	camrig.rotation.y = lerp_angle(camrig.rotation.y, -atan2(direction.z, direction.x) - deg2rad(90), 0.25)
 
 func look(look_dir: Vector2, delta: float):
