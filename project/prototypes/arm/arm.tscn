@@ -1,0 +1,117 @@
+[gd_scene load_steps=19 format=3 uid="uid://cxk5u4s36doj6"]
+
+[ext_resource type="PackedScene" uid="uid://hsy6jdh7t611" path="res://prototypes/arm/arm.gltf" id="1_x4y71"]
+[ext_resource type="Script" path="res://prototypes/arm/arm.gd" id="2_1hlb2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_faoa7"]
+sky_top_color = Color(0.2, 0.168627, 0.133333, 1)
+sky_horizon_color = Color(0.6, 0.584314, 0.566667, 1)
+ground_bottom_color = Color(0.2, 0.168627, 0.133333, 1)
+ground_horizon_color = Color(0.6, 0.584314, 0.566667, 1)
+
+[sub_resource type="Sky" id="Sky_rbs4p"]
+sky_material = SubResource( "ProceduralSkyMaterial_faoa7" )
+
+[sub_resource type="Environment" id="Environment_2hr30"]
+background_mode = 1
+background_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
+sky = SubResource( "Sky_rbs4p" )
+tonemap_mode = 2
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_0nnau"]
+filters = ["Armature/Skeleton3D:Hand.L", "Armature/Skeleton3D:Hand.R", "Armature/Skeleton3D:LowerArm.L", "Armature/Skeleton3D:LowerArm.R", "Armature/Skeleton3D:UpperArm.L", "Armature/Skeleton3D:UpperArm.R"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ilijl"]
+animation = &"Fire"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g0y1r"]
+animation = &"AimMiddle"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_fapwa"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Hand.L", "Armature/Skeleton3D:Hand.R", "Armature/Skeleton3D:LowerArm.L", "Armature/Skeleton3D:LowerArm.R", "Armature/Skeleton3D:UpperArm.L", "Armature/Skeleton3D:UpperArm.R"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_urjig"]
+animation = &"AimMiddle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5qvoh"]
+animation = &"ArmUp"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tg477"]
+animation = &"AimDown"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_cb24l"]
+blend_point_0/node = SubResource( "AnimationNodeAnimation_urjig" )
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource( "AnimationNodeAnimation_5qvoh" )
+blend_point_1/pos = 1.0
+blend_point_2/node = SubResource( "AnimationNodeAnimation_tg477" )
+blend_point_2/pos = -1.0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2kb67"]
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_gvc4a"]
+states/Aim/node = SubResource( "AnimationNodeBlendSpace1D_cb24l" )
+states/Aim/position = Vector2(312, 100)
+transitions = ["Start", "Aim", SubResource( "AnimationNodeStateMachineTransition_2kb67" )]
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_1hjsi"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_f4joa"]
+graph_offset = Vector2(-490.45, 27.8481)
+nodes/Add2/node = SubResource( "AnimationNodeAdd2_0nnau" )
+nodes/Add2/position = Vector2(660, -40)
+nodes/Animation/node = SubResource( "AnimationNodeAnimation_g0y1r" )
+nodes/Animation/position = Vector2(-20, 240)
+"nodes/Animation 2/node" = SubResource( "AnimationNodeAnimation_ilijl" )
+"nodes/Animation 2/position" = Vector2(-20, 380)
+nodes/OneShot/node = SubResource( "AnimationNodeOneShot_fapwa" )
+nodes/OneShot/position = Vector2(260, 220)
+nodes/StateMachine/node = SubResource( "AnimationNodeStateMachine_gvc4a" )
+nodes/StateMachine/position = Vector2(140, 60)
+nodes/TimeScale/node = SubResource( "AnimationNodeTimeScale_1hjsi" )
+nodes/TimeScale/position = Vector2(480, 260)
+nodes/output/position = Vector2(920, 160)
+node_connections = [&"output", 0, &"Add2", &"Add2", 0, &"StateMachine", &"Add2", 1, &"TimeScale", &"OneShot", 0, &"Animation", &"OneShot", 1, &"Animation 2", &"TimeScale", 0, &"OneShot"]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_t0p3y"]
+
+[node name="arm" instance=ExtResource( "1_x4y71" )]
+script = ExtResource( "2_1hlb2" )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="0"]
+environment = SubResource( "Environment_2hr30" )
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/rotation = Quaternion(-0.0108242, 0.173637, 0.0039397, 0.984742)
+bones/2/rotation = Quaternion(-0.0516159, 0.0870387, 0.00451581, 0.994857)
+bones/3/rotation = Quaternion(0.688272, -0.12771, 0.218274, 0.679948)
+bones/4/rotation = Quaternion(-0.143478, -1.21175e-06, 7.293e-08, 0.989653)
+bones/5/rotation = Quaternion(0.127408, 1.05956e-06, -1.08197e-07, 0.99185)
+bones/6/rotation = Quaternion(0.697173, 0.0866196, -0.0969843, 0.705011)
+bones/7/rotation = Quaternion(-0.173648, 6.17671e-09, -6.82465e-08, 0.984808)
+bones/8/rotation = Quaternion(0.0870728, -0.00380168, 0.0434534, 0.995247)
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="3"]
+tree_root = SubResource( "AnimationNodeBlendTree_f4joa" )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/Add2/add_amount = 1.0
+parameters/OneShot/active = false
+parameters/StateMachine/playback = SubResource( "AnimationNodeStateMachinePlayback_t0p3y" )
+parameters/StateMachine/Aim/blend_position = 0.132
+parameters/TimeScale/scale = 3.0
+
+[node name="YPivot" type="Node3D" parent="." index="4"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="XPivot" type="Node3D" parent="YPivot" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.647, 1.569, 0)
+
+[node name="Camera3D" type="Camera3D" parent="YPivot/XPivot" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 2)
+fov = 60.0
