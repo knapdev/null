@@ -12,7 +12,7 @@ _global_script_classes=[{
 "base": "Node",
 "class": &"BaseState",
 "language": &"GDScript",
-"path": "res://common/state_machine/base_state.gd"
+"path": "res://common/scripts/state_machine/base_state.gd"
 }, {
 "base": "BaseState",
 "class": &"PlayerIdleState",
@@ -27,7 +27,7 @@ _global_script_classes=[{
 "base": "Node",
 "class": &"StateMachine",
 "language": &"GDScript",
-"path": "res://common/state_machine/state_machine.gd"
+"path": "res://common/scripts/state_machine/state_machine.gd"
 }]
 _global_script_class_icons={
 "BaseState": "",
