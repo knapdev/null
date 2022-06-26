@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene load_steps=14 format=3 uid="uid://d2of4f6xureyy"]
 
 [ext_resource type="Material" path="res://common/materials/grid_material.tres" id="1_qwhbu"]
 [ext_resource type="PackedScene" uid="uid://b31kvvna1deng" path="res://player/player.tscn" id="2_ap6sq"]
