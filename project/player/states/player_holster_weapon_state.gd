@@ -1,5 +1,7 @@
-class_name PlayerIdleState
+class_name PlayerHolsterWeaponState
 extends BaseState
+
+var has_triggered: bool = false
 
 func enter():
 	super.enter()
@@ -13,18 +15,17 @@ func input(event: InputEvent):
 func process(delta: float):
 	super.process(delta)
 	
-	if Input.is_action_just_released("ui_accept"):
-		if context.is_armed:
-			context.state.push_state(PlayerHolsterWeaponState.new())
-		else:
-			context.state.push_state(PlayerDrawWeaponState.new())
+	if has_triggered == false:
+		context.anim_tree.set("parameters/HolsterWeapon/active", true)
+		has_triggered = true
+	else:
+		if context.anim_tree.get("parameters/HolsterWeapon/active") == false:
+			context.anim_tree.set("parameters/ArmedTransition/current", false)
+			context.is_armed = false
+			context.state.pop_state()
 	
 func physics_process(delta: float):
 	super.physics_process(delta)
-	
-	var move_input_dir = context.get_move_input()
-	if move_input_dir.length_squared() > 0:
-		context.state.change_state(PlayerMoveState.new())
 		
 	context.turn(0.0, delta)
 	context.move(0.0, delta)

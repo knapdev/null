@@ -1,8 +1,7 @@
-extends BaseState
 class_name PlayerMoveState
+extends BaseState
 
 func enter():
-	context.playback.travel("Walk")
 	super.enter()
 	
 func exit():
@@ -13,6 +12,14 @@ func input(event: InputEvent):
 	
 func process(delta: float):
 	super.process(delta)
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		if context.is_armed:
+			context.state.change_state(PlayerIdleState.new())
+			context.state.push_state(PlayerHolsterWeaponState.new())
+		else:
+			context.state.change_state(PlayerIdleState.new())
+			context.state.push_state(PlayerDrawWeaponState.new())
 	
 func physics_process(delta: float):
 	super.physics_process(delta)
@@ -26,5 +33,3 @@ func physics_process(delta: float):
 	
 	var look_input_dir = context.get_look_input()
 	context.look(look_input_dir, delta)
-	
-	context.anim_tree.set("parameters/Walk/blend_position", -move_input_dir.y)

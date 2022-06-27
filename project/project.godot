@@ -15,6 +15,16 @@ _global_script_classes=[{
 "path": "res://common/scripts/state_machine/base_state.gd"
 }, {
 "base": "BaseState",
+"class": &"PlayerDrawWeaponState",
+"language": &"GDScript",
+"path": "res://player/states/player_draw_weapon_state.gd"
+}, {
+"base": "BaseState",
+"class": &"PlayerHolsterWeaponState",
+"language": &"GDScript",
+"path": "res://player/states/player_holster_weapon_state.gd"
+}, {
+"base": "BaseState",
 "class": &"PlayerIdleState",
 "language": &"GDScript",
 "path": "res://player/states/player_idle_state.gd"
@@ -31,6 +41,8 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "BaseState": "",
+"PlayerDrawWeaponState": "",
+"PlayerHolsterWeaponState": "",
 "PlayerIdleState": "",
 "PlayerMoveState": "",
 "StateMachine": ""
