@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://h3noet1ivbco"]
+
+[ext_resource type="Script" path="res://camera_rig/camera_rig.gd" id="1_dr25r"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xtysa"]
+margin = 0.1
+radius = 0.25
+
+[node name="CameraRig" type="Node3D"]
+script = ExtResource( "1_dr25r" )
+
+[node name="Offset" type="Position3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1.25, 0)
+
+[node name="Pivot" type="Position3D" parent="Offset"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.25)
+
+[node name="SpringArm" type="SpringArm3D" parent="Offset/Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource( "SphereShape3D_xtysa" )
+spring_length = 0.7
+
+[node name="Camera3D" type="Camera3D" parent="Offset/Pivot/SpringArm"]
+current = true
+fov = 60.0
+near = 0.01
+far = 1024.0

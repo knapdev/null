@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2of4f6xureyy"]
+[gd_scene load_steps=15 format=3 uid="uid://cldu1feuto7of"]
 
 [ext_resource type="Material" path="res://common/materials/grid_material.tres" id="1_qwhbu"]
-[ext_resource type="PackedScene" uid="uid://b31kvvna1deng" path="res://player/player.tscn" id="2_ap6sq"]
+[ext_resource type="PackedScene" uid="uid://bawxslvm1ffxe" path="res://player/player.tscn" id="2_ap6sq"]
+[ext_resource type="PackedScene" uid="uid://h3noet1ivbco" path="res://camera_rig/camera_rig.tscn" id="3_3bys5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vpnyh"]
 size = Vector3(32, 0.1, 32)
@@ -145,3 +146,7 @@ mesh = SubResource( "BoxMesh_4ofh1" )
 shape = SubResource( "ConcavePolygonShape3D_4l0rh" )
 
 [node name="Player" parent="." instance=ExtResource( "2_ap6sq" )]
+camera_rig_path = NodePath("../CameraRig")
+
+[node name="CameraRig" parent="." instance=ExtResource( "3_3bys5" )]
+target_path = NodePath("../Player")
