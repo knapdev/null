@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://033h1hu64fsb"
+uid="uid://bxwrx174hequy"
 path="res://.godot/imported/manny.gltf-acaf79d9e44dc8f966006520e916372b.scn"
 
 [deps]
@@ -30,43 +30,43 @@ _subresources={
 "DrawHandgun": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://player/manny/animations/draw_handgun.tres",
+"save_to_file/path": "res://player/manny/animations/draw_handgun_anim.tres",
 "settings/loop_mode": 0
 },
 "HolsterHandgun": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://player/manny/animations/holster_handgun.tres",
+"save_to_file/path": "res://player/manny/animations/holster_handgun_anim.tres",
 "settings/loop_mode": 0
 },
 "IdleArmed": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://player/manny/animations/idle_armed.tres",
+"save_to_file/path": "res://player/manny/animations/idle_armed_anim.tres",
 "settings/loop_mode": 1
 },
 "IdleUnarmed": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://player/manny/animations/idle_unarmed.tres",
+"save_to_file/path": "res://player/manny/animations/idle_unarmed_anim.tres",
 "settings/loop_mode": 1
 },
 "ReadyHandgun": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://player/manny/animations/ready_handgun.tres",
+"save_to_file/path": "res://player/manny/animations/ready_handgun_anim.tres",
 "settings/loop_mode": 1
 },
 "WalkArmed": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://player/manny/animations/walk_armed.tres",
+"save_to_file/path": "res://player/manny/animations/walk_armed_anim.tres",
 "settings/loop_mode": 1
 },
 "WalkUnarmed": {
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://player/manny/animations/walk_unarmed.tres",
+"save_to_file/path": "res://player/manny/animations/walk_unarmed_anim.tres",
 "settings/loop_mode": 1
 }
 },
