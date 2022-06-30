@@ -42,7 +42,7 @@ _global_script_classes=[{
 "base": "BaseState",
 "class": &"PlayerRunState",
 "language": &"GDScript",
-"path": "res://player_run_state.gd"
+"path": "res://player/states/player_run_state.gd"
 }, {
 "base": "Node",
 "class": &"StateMachine",
