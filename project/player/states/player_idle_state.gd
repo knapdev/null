@@ -13,8 +13,13 @@ func input(event: InputEvent):
 func process(delta: float):
 	super.process(delta)
 	
-	if Input.is_action_just_released("ui_accept"):
-		if context.is_armed:
+	context.camera_rig_offset.rotation.x = lerp(context.camera_rig_offset.rotation.x, 0.0, 10 * delta)
+	
+	if Input.is_action_pressed("aim") && context.is_armed == true:
+		context.state.push_state(PlayerAimWeaponState.new())
+	
+	if Input.is_action_just_released("equip_toggle"):
+		if context.is_armed == true:
 			context.state.push_state(PlayerHolsterWeaponState.new())
 		else:
 			context.state.push_state(PlayerDrawWeaponState.new())

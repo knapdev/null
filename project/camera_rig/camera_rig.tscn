@@ -10,13 +10,12 @@ radius = 0.25
 script = ExtResource( "1_dr25r" )
 
 [node name="Offset" type="Position3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1.25, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1.35, 0)
 
 [node name="Pivot" type="Position3D" parent="Offset"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.25)
 
 [node name="SpringArm" type="SpringArm3D" parent="Offset/Pivot"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource( "SphereShape3D_xtysa" )
 spring_length = 0.7
 

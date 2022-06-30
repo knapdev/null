@@ -7,15 +7,14 @@ var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export var look_range_horizontal: float = 60.0
 @export var look_range_vertical: float = 30.0
-@export var look_speed: float = 5
+@export var look_sensitivity_horizontal: float = 5
+@export var look_sensitivity_vertical: float = 5
 
-var direction: Vector3 = Vector3.FORWARD
+@export var aim_sensitivity_horizontal: float = 45.0
+@export var aim_sensitivity_vertical: float = 45.0
 
-var state: StateMachine = null
-
-@onready var move_speed: float = walk_speed
-
-@onready var model: Node3D = $Model
+@export var camera_distance_normal: float = 0.5
+@export var camera_distance_aim: float = 0.3
 
 @export var camera_rig_path: NodePath
 @onready var camera_rig: Node3D = get_node(camera_rig_path)
@@ -33,10 +32,17 @@ var state: StateMachine = null
 @export var handgun_holster_path: NodePath
 @onready var handgun_holster_node: Node3D = get_node(handgun_holster_path)
 
+@onready var model: Node3D = $Model
+@onready var move_speed: float = walk_speed
+
+var state: StateMachine = null
+var direction: Vector3 = Vector3.FORWARD
 var is_armed: bool = false
 var move_blend: float = 0.0
 
 func _ready():
+	camera_rig.set_target_camera_distance(camera_distance_normal)
+	
 	anim_tree.set("parameters/ArmedTransition/current", false)
 		
 	state = StateMachine.new()
@@ -83,8 +89,8 @@ func turn(amount: float, delta: float):
 func look(look_dir: Vector2, delta: float):
 	var rot_y = camera_rig_pivot.rotation.y
 	var rot_x = camera_rig_pivot.rotation.x
-	camera_rig_pivot.rotation.y = lerp_angle(rot_y, camera_rig_offset.rotation.y - deg2rad(look_range_horizontal * look_dir.x), look_speed * delta)
-	camera_rig_pivot.rotation.x = lerp_angle(rot_x, camera_rig_offset.rotation.x - deg2rad(look_range_vertical * look_dir.y), look_speed * delta)
+	camera_rig_pivot.rotation.y = lerp_angle(rot_y, camera_rig_offset.rotation.y - deg2rad(look_range_horizontal * look_dir.x), look_sensitivity_horizontal * delta)
+	camera_rig_pivot.rotation.x = lerp_angle(rot_x, camera_rig_offset.rotation.x - deg2rad(look_range_vertical * look_dir.y), look_sensitivity_vertical * delta)
 
 func attach_weapon_to_grip():
 	handgun_node.get_parent().remove_child(handgun_node)
