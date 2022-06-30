@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://2bg84iskj7gi"
+uid="uid://dcvf7k85xyl4h"
 path="res://.godot/imported/manny.gltf-acaf79d9e44dc8f966006520e916372b.scn"
 
 [deps]
@@ -61,6 +61,12 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://player/manny/animations/ready_handgun_anim.tres",
+"settings/loop_mode": 1
+},
+"Run": {
+"save_to_file/enabled": true,
+"save_to_file/keep_custom_tracks": true,
+"save_to_file/path": "res://player/manny/animations/run_anim.tres",
 "settings/loop_mode": 1
 },
 "WalkArmed": {

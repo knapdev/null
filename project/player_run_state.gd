@@ -1,11 +1,27 @@
-class_name PlayerMoveState
+class_name PlayerRunState
 extends BaseState
 
 func enter():
 	super.enter()
 	
+	context.move_speed = context.run_move_speed
+	context.turn_speed = context.run_turn_speed
+	
+	if context.is_armed:
+		context.anim_tree.set("parameters/ArmedRunningTransition/current", true)
+	else:
+		context.anim_tree.set("parameters/UnarmedRunningTransition/current", true)
+	
 func exit():
 	super.exit()
+	
+	context.move_speed = context.walk_move_speed
+	context.turn_speed = context.walk_turn_speed
+	
+	if context.is_armed:
+		context.anim_tree.set("parameters/ArmedRunningTransition/current", false)
+	else:
+		context.anim_tree.set("parameters/UnarmedRunningTransition/current", false)
 	
 func input(event: InputEvent):
 	super.input(event)
@@ -31,14 +47,12 @@ func physics_process(delta: float):
 	super.physics_process(delta)
 	
 	var move_input_dir = context.get_move_input()
-	if move_input_dir.length_squared() <= 0:
-		context.state.change_state(PlayerIdleState.new())
 		
-	if Input.is_action_just_pressed("run") && move_input_dir.y <= -0.5:
-		context.state.push_state(PlayerRunState.new())
+	if abs(move_input_dir.y) < 0.5:
+		context.state.pop_state()
 	
 	context.turn(move_input_dir.x, delta)
-	context.move(-move_input_dir.y, delta)
+	context.move(1.0, delta)
 	
 	var look_input_dir = context.get_look_input()
 	context.look(look_input_dir, delta)

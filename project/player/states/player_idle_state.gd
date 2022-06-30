@@ -18,7 +18,7 @@ func process(delta: float):
 	if Input.is_action_pressed("aim") && context.is_armed == true:
 		context.state.push_state(PlayerAimWeaponState.new())
 	
-	if Input.is_action_just_released("equip_toggle"):
+	if Input.is_action_just_pressed("equip_toggle"):
 		if context.is_armed == true:
 			context.state.push_state(PlayerHolsterWeaponState.new())
 		else:

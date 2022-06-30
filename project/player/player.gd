@@ -2,8 +2,10 @@ extends CharacterBody3D
 
 var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-@export var walk_speed: float = 2.0
-@export var turn_speed: float = 90.0
+@export var walk_move_speed: float = 2.0
+@export var run_move_speed: float = 4.0
+@export var walk_turn_speed: float = 90.0
+@export var run_turn_speed: float = 60.0
 
 @export var look_range_horizontal: float = 60.0
 @export var look_range_vertical: float = 30.0
@@ -33,7 +35,8 @@ var GRAVITY = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var handgun_holster_node: Node3D = get_node(handgun_holster_path)
 
 @onready var model: Node3D = $Model
-@onready var move_speed: float = walk_speed
+@onready var move_speed: float = walk_move_speed
+@onready var turn_speed: float = walk_turn_speed
 
 var state: StateMachine = null
 var direction: Vector3 = Vector3.FORWARD
