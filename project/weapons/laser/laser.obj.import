@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw0e0hgt4om34"
+path="res://.godot/imported/laser.obj-ecf1ac5f392c5cc5ff61c1436cbd7a03.mesh"
+
+[deps]
+
+files=["res://.godot/imported/laser.obj-ecf1ac5f392c5cc5ff61c1436cbd7a03.mesh"]
+
+source_file="res://weapons/laser/laser.obj"
+dest_files=["res://.godot/imported/laser.obj-ecf1ac5f392c5cc5ff61c1436cbd7a03.mesh", "res://.godot/imported/laser.obj-ecf1ac5f392c5cc5ff61c1436cbd7a03.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
