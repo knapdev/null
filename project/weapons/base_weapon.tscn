@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ycg4rse80w7"]
+
+[ext_resource type="Script" path="res://weapons/base_weapon.gd" id="1_lp5xk"]
+[ext_resource type="PackedScene" uid="uid://chds33i30s4ly" path="res://weapons/laser/laser.tscn" id="1_umlvu"]
+
+[node name="BaseWeapon" type="Node3D"]
+script = ExtResource("1_lp5xk")
+
+[node name="Laser" parent="." instance=ExtResource("1_umlvu")]

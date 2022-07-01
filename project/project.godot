@@ -14,6 +14,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://common/scripts/state_machine/base_state.gd"
 }, {
+"base": "Node3D",
+"class": &"BaseWeapon",
+"language": &"GDScript",
+"path": "res://weapons/base_weapon.gd"
+}, {
 "base": "BaseState",
 "class": &"PlayerAimWeaponState",
 "language": &"GDScript",
@@ -51,6 +56,7 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "BaseState": "",
+"BaseWeapon": "",
 "PlayerAimWeaponState": "",
 "PlayerDrawWeaponState": "",
 "PlayerHolsterWeaponState": "",
