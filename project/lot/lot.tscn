@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cldu1feuto7of"]
+[gd_scene load_steps=29 format=3 uid="uid://cldu1feuto7of"]
 
 [ext_resource type="Material" path="res://common/materials/grid_material.tres" id="1_r23oa"]
 [ext_resource type="PackedScene" uid="uid://bawxslvm1ffxe" path="res://player/player.tscn" id="2_ap6sq"]
@@ -48,6 +48,39 @@ size = Vector3(2, 2, 2)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4l0rh"]
 data = PackedVector3Array(-1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7xjg0"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6ehx5"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wyqra"]
+radius = 0.25
+
+[sub_resource type="SphereMesh" id="SphereMesh_hiu6m"]
+radius = 0.25
+height = 0.5
+radial_segments = 8
+rings = 4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5fv4m"]
+size = Vector3(1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ko8ax"]
+size = Vector3(1, 0.1, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngju0"]
+size = Vector3(0.1, 2.05, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ggneh"]
+size = Vector3(0.1, 2.05, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vvpp3"]
+size = Vector3(0.25, 0.5, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2wuhi"]
+size = Vector3(0.25, 0.5, 0.1)
 
 [node name="LOT" type="Node3D"]
 
@@ -162,3 +195,92 @@ camera_rig_path = NodePath("../CameraRig")
 
 [node name="CameraRig" parent="." instance=ExtResource("3_3bys5")]
 target_path = NodePath("../Player")
+
+[node name="Box" type="RigidDynamicBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.675, -6.923)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box"]
+shape = SubResource("BoxShape3D_7xjg0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Box"]
+material_override = ExtResource("1_r23oa")
+mesh = SubResource("BoxMesh_6ehx5")
+
+[node name="Ball" type="RigidDynamicBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18777, -6.91104)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ball"]
+shape = SubResource("SphereShape3D_wyqra")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ball"]
+material_override = ExtResource("1_r23oa")
+mesh = SubResource("SphereMesh_hiu6m")
+
+[node name="TargetStand" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 0, -7)
+
+[node name="Pole" type="StaticBody3D" parent="TargetStand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetStand/Pole"]
+shape = SubResource("BoxShape3D_5fv4m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetStand/Pole"]
+material_override = ExtResource("1_r23oa")
+mesh = SubResource("BoxMesh_ko8ax")
+
+[node name="Leg" type="StaticBody3D" parent="TargetStand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 1.025, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetStand/Leg"]
+shape = SubResource("BoxShape3D_ngju0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetStand/Leg"]
+material_override = ExtResource("1_r23oa")
+mesh = SubResource("BoxMesh_ggneh")
+
+[node name="Leg2" type="StaticBody3D" parent="TargetStand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 1.025, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetStand/Leg2"]
+shape = SubResource("BoxShape3D_ngju0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetStand/Leg2"]
+material_override = ExtResource("1_r23oa")
+mesh = SubResource("BoxMesh_ggneh")
+
+[node name="TargetHinge" type="HingeJoint3D" parent="TargetStand"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.25, 1.9, 0)
+nodes/node_a = NodePath("../Pole")
+nodes/node_b = NodePath("../Target")
+collision/exclude_nodes = false
+
+[node name="Target" type="RigidDynamicBody3D" parent="TargetStand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 1.9, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetStand/Target"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_vvpp3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetStand/Target"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+material_override = ExtResource("1_r23oa")
+mesh = SubResource("BoxMesh_2wuhi")
+
+[node name="TargetHinge2" type="HingeJoint3D" parent="TargetStand"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.25, 1.9, 0)
+nodes/node_a = NodePath("../Pole")
+nodes/node_b = NodePath("../Target2")
+collision/exclude_nodes = false
+
+[node name="Target2" type="RigidDynamicBody3D" parent="TargetStand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 1.9, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetStand/Target2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_vvpp3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TargetStand/Target2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+material_override = ExtResource("1_r23oa")
+mesh = SubResource("BoxMesh_2wuhi")

@@ -8,6 +8,7 @@ var can_fire: bool = true
 
 @onready var round_count: int = round_capacity
 @onready var laser: Node3D = $Laser
+@onready var raycast: RayCast3D = $RayCast3D
 
 func _ready():
 	set_laser_enabled(false)

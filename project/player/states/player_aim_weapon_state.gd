@@ -12,12 +12,16 @@ func enter():
 	context.anim_tree.set("parameters/AimSeek/seek_position", 0.5)
 	context.anim_tree.set("parameters/AimingTransition/current", true)
 	
+	context.handgun_node.set_laser_enabled(true)
+	
 func exit():
 	super.exit()
 	
 	context.camera_rig.set_target_camera_distance(context.camera_distance_normal)
 	
 	context.anim_tree.set("parameters/AimingTransition/current", false)
+	
+	context.handgun_node.set_laser_enabled(false)
 	
 func input(event: InputEvent):
 	super.input(event)
@@ -30,6 +34,11 @@ func process(delta: float):
 	
 	if Input.is_action_pressed("aim") == false:
 		context.state.pop_state()
+		
+	if Input.is_action_just_pressed("fire"):
+		context.handgun_node.fire()
+	if Input.is_action_just_pressed("reload"):
+		context.handgun_node.reload()
 	
 	var aim_input_dir = context.get_look_input()
 	
